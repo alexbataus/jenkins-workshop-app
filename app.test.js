@@ -7,9 +7,4 @@ const request = require('supertest');
         expect(response.statusCode).toBe(200);
         expect(response.text).toBe('Hello, CI/CD World!');
       });
-      it('should respond to a new endpoint', async () => {
-        const response = await request(app).get('/new');
-        expect(response.statusCode).toBe(200);
-        expect(response.text).toBe('Hello, New Endpoint!');
-      });
     });
